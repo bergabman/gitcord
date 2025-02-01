@@ -1,0 +1,25 @@
+{
+  "bot_token": "",
+  "github_token": "",
+  "report_channel_ID": 1206302338499878982,
+  "last_checked": "2025-02-01 23:35:09.468495200 UTC",
+  "students": [
+    {
+      "mentor": "berg",
+      "name": "berg",
+      "git_repo_url": "https://github.com/bergabman/WhiteHatBot.git"
+    },
+    {
+      "mentor": "<@307429921225965569>",
+      "name": "berg",
+      "git_repo_url": "https://github.com/bergabman/WhiteHatBot.git"
+    }
+  ],
+  "seen_commit_hashes": [
+    "fa599f994c5b671856bb78936ff77a662c7e9e15",
+    "f387444f2bac63a93747d07d090fe27152bf7fcf",
+    "2fa4188fac9e256abc108dddc6ccf6ab99fccd98",
+    "580a801715e9cb253875be15755bef3b0801da59",
+    "f4564ff9cd5272a01ae4fd8b9d24a168ff7942a2"
+  ]
+}

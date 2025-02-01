@@ -1,0 +1,20 @@
+[package]
+name = "gitcord"
+version = "0.1.0"
+edition = "2021"
+authors = ["berg"]
+
+[dependencies]
+tokio = { version = "1.43.0", features = ["macros", "rt-multi-thread", "signal"] }
+serenity = { version = "0.12.4", default-features = true}
+chrono = { version = "0.4.39", default-features = false, features = ["clock"] }
+sys-info = "0.9.1"
+anyhow = "1.0.95"
+serde = "1.0.217"
+serde_derive = "1.0.217"
+serde_json = "1.0.138"
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = [ "env-filter" ]}
+tracing-futures = "0.2.5" # needed so intrument works with async functions
+octocrab ="0.43.0"
+url = "2.5.4"
