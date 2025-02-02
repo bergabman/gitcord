@@ -25,15 +25,15 @@ pub struct Config {
     pub github_token: String,
     pub report_channel_ID: u64,
     pub last_checked: String,
-    pub students: Vec<Student>,
+    pub mentees: Vec<Mentee>,
     pub seen_commit_hashes: HashSet<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
-pub struct Student {
+pub struct Mentee {
     pub mentor: String,
-    pub name: String,
-    pub git_repo_url: String,
+    pub discord_username: String,
+    pub git_username:String,
 }
 
 pub fn loadconfig() -> Result<Config> {
