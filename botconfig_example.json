@@ -2,24 +2,27 @@
   "bot_token": "",
   "github_token": "",
   "report_channel_ID": 1206302338499878982,
-  "last_checked": "2025-02-01 23:35:09.468495200 UTC",
-  "students": [
+  "last_checked": "2025-02-02 16:01:23.796007 UTC",
+  "mentees": [
     {
-      "mentor": "berg",
-      "name": "berg",
-      "git_repo_url": "https://github.com/bergabman/WhiteHatBot.git"
+      "mentor": "<@307429921225965569>",
+      "discord_username": "judd1337",
+      "git_username": "judd1337"
     },
     {
       "mentor": "<@307429921225965569>",
-      "name": "berg",
-      "git_repo_url": "https://github.com/bergabman/WhiteHatBot.git"
+      "discord_username": "Weebad123",
+      "git_username": "Weebad123"
     }
   ],
   "seen_commit_hashes": [
+    "6c6370e75348010905ff6414fe60ba438d857d38",
+    "68bba6a4af5c04cff3a9eeb205e1be3395dd2e61",
+    "b18baebaf2ad179812702e33c37f40714af0e02c",
+    "f22f256568e64c2d5e1a9e03e51aefdd43f4d06c",
+    "3929d20d7b0430e39f05fdb6b4dc8d063b7f72a8",
     "fa599f994c5b671856bb78936ff77a662c7e9e15",
-    "f387444f2bac63a93747d07d090fe27152bf7fcf",
-    "2fa4188fac9e256abc108dddc6ccf6ab99fccd98",
-    "580a801715e9cb253875be15755bef3b0801da59",
-    "f4564ff9cd5272a01ae4fd8b9d24a168ff7942a2"
+    "9e0ed97c10234753bce23e8cc5b698e538c08119",
+    "c7fa8899eafd1df80693cae369095b9178230ada"
   ]
 }

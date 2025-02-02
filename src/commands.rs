@@ -26,19 +26,20 @@ pub async fn git_check(ctx: &Context) -> Option<HashSet<String>> {
                 // println!("repo updated_at {:?}", repo.updated_at);
 
                 let repo = octocrab.repos(mentee.git_username.clone(), repo.name.clone());
-                let commits = repo.list_commits().since(last_checked).send().await.unwrap();
-                for commit in commits {
-                    if !current_config.seen_commit_hashes.contains(&commit.sha) {
-                        return_hashes.insert(commit.sha.clone());
-                        let author = commit.commit.author.unwrap();
-                        // println!("commmit url {:?}", commit.html_url);
-        
-                        ChannelId::new(current_config.report_channel_ID).say(
-                            &ctx.http, 
-                            format!("{} | **Date:** {} **Author:** {} **Commit message:** {} <{}>",
-                                mentee.mentor, author.date.unwrap(), author.name, commit.commit.message, commit.html_url
-                            )
-                        ).await.unwrap();
+                if let Ok(commits) = repo.list_commits().since(last_checked).send().await {
+                    for commit in commits {
+                        if !current_config.seen_commit_hashes.contains(&commit.sha) {
+                            return_hashes.insert(commit.sha.clone());
+                            let author = commit.commit.author.unwrap();
+                            // println!("commmit url {:?}", commit.html_url);
+            
+                            ChannelId::new(current_config.report_channel_ID).say(
+                                &ctx.http, 
+                                format!("{} | {} | **Date:** {} **Author:** {} **Commit message:** {} <{}>",
+                                    mentee.mentor, mentee.discord_username, author.date.unwrap(), author.name, commit.commit.message, commit.html_url
+                                )
+                            ).await.unwrap();
+                        }
                     }
                 }
             }

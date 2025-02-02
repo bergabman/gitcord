@@ -53,13 +53,13 @@ impl EventHandler for Handler {
                     if let Some(hashes) = git_result {
                         let mut data = ctx.data.write().await;
                         let mut current_config = data.get_mut::<Config>().unwrap();
-                        println!("current config {:?}", current_config);
+                        // println!("current config {:?}", current_config);
                         current_config.seen_commit_hashes.extend(hashes);
                         current_config.last_checked = Utc::now().to_string();
                         saveconfig(&current_config).unwrap();
                     }
-                    let data = ctx.data.read().await;
-                    println!("{:?}", data.get::<Config>());
+                    // let data = ctx.data.read().await;
+                    // println!("{:?}", data.get::<Config>());
                     // set_activity_to_current_time(&ctx2);
                     tokio::time::sleep(Duration::from_secs(5)).await;
                 }
